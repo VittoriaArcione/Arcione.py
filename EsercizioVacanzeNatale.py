@@ -1,11 +1,8 @@
 from random import randint
 
-
 f = open("dati.txt", 'w')
 
-
 dati = ""
-
 
 for riga in range(100):
 
@@ -19,12 +16,9 @@ for riga in range(100):
     dati = dati + "\n"
 
 
-
 print(dati)
 
-
 f.write(dati)
-
 
 f.close()
 
