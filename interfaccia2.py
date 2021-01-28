@@ -1,13 +1,15 @@
+
+
 import csv
 
-with open('ello.txt','r') as file:
+with open('dati.txt','r') as file:
  reader = csv.reader(file)
  for row in reader:
   print(row)
 print("")
 print("")
 
-with open('ello.txt', 'r') as file:
+with open('dati.txt', 'r') as file:
  csv_file = csv.DictReader(file)
  for row in csv_file:
   print(dict(row))
@@ -17,7 +19,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-f = open("ello.txt", 'r')
+f = open("dati.txt", 'r')
 
 
 coordX = []
@@ -54,5 +56,16 @@ print(type(coordY))
 
 
 plt.scatter(coordX,coordY)
+
+from guizero import *
+
+def do_nothing():
+
+   open("dati.txt", 'r')
+
+app = App(title="Keypad example", width=100, height=90, layout="grid")
+
+button1 = PushButton(app, command=do_nothing, text="1", grid=[0,0])
+app.display()
 
 plt.show()
