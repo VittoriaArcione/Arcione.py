@@ -1,3 +1,4 @@
+from random import randint
 import string
 import numpy as np
 import matplotlib.pyplot as plt
@@ -72,6 +73,7 @@ plt.savefig("grafico.png")
 
 
 app= App(title="matplotlib")
+
 
 
 grafico1= Picture(app, image="grafico.png")
