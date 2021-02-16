@@ -54,7 +54,6 @@ print ("Y: ",coordY)
 print(type(coordX))
 print(type(coordY))
 
-
 plt.scatter(coordX,coordY)
 
 from guizero import *
