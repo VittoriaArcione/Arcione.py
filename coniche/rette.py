@@ -7,12 +7,15 @@ class retta:
         self.__c = float(c)
         
     def getA(self):
+        print("il valore di a è: ")
         return self.__a
 
     def getB(self):
+        print("il valore di b è: ")
         return self.__b
     
     def getC(self):
+        print("il valore di c è: ")
         return self.__c
       
     def equazione_imp(self):
