@@ -10,9 +10,11 @@ class retta:
         print("il valore di a è: ")
         return self.__a
 
+
     def getB(self):
         print("il valore di b è: ")
         return self.__b
+
     
     def getC(self):
         print("il valore di c è: ")
@@ -29,6 +31,7 @@ class retta:
         else:
             return f'l equazione implicita è: {self.__a}x +{self.__b}y + {self.__c} = 0'
 
+
     def equazione_esp(self):
         if int(self.__a) == 0:
             return f'l equazione esplicita è: y = -{self.__c}/{self.__b}'
@@ -39,8 +42,6 @@ class retta:
         else:
             return f'l equazione esplicita è: y =(-{self.__a}/{self.__c})x + (-{self.__c}/{self.__b}) '
 
-    
-
  
     def coefficiente(self):
         if int(self.__b) == 0: 
@@ -50,11 +51,13 @@ class retta:
         else:
             return f'il coefficiente angolare è: k = -{self.__a}/{self.__b} '
 
+
     def intercetta(self):
         if int(self.__c)== 0:
             return 'l intercetta è q = 0'
         else:
             return f'l intercetta è: q = -{self.__c}/{self.__b}'
+
 
     def fascio(self,a1,b1,c1): 
 
@@ -71,12 +74,12 @@ class retta:
             return f'le rette sono coincidenti'
         if -self.__a/self.__b == -a1/b1 and -self.__c/self.__b == -c1/b1:
             return self
-        
         x = ((self.__c/self.__b)-(c1/b1))/((-self.__a/self.__b)+(a1/b1))
         y = (-self.__a/self.__b)*x+(-self.__c/self.__b)
         print("le coordinate del punto di intersezione sono: ")
         return round(x, 2), round(y, 2) 
         
+
     def trovaY(self, x): 
         x = float(x)
         y = (self.__a)/(self.__b)*(x)-(self.__c)/(self.__b) 
@@ -85,12 +88,14 @@ class retta:
           return y1
         else: 
           return y 
+
         
     def punti(self, N, M):
         output = []
         for x in range(N, M+1):
             output.append((x, self.trovaY(x)))
         return output 
+
 
 a_b_c = retta (input("a: "), input("b: "), input("c: "))
 a1 = float(input("a1: "))
