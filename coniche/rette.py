@@ -75,8 +75,13 @@ class retta:
     def trovaY(self, x): 
         x = float(x)
         y = (self.__a)/(self.__b)*(x)-(self.__c)/(self.__b) 
+        y1 = -(self.__c)/(self.__b) 
         print("il valore di y in base alla x scelta è: ")
-        return y
+        if x == 0:
+          return y1
+        else: 
+          return y 
+            
        
 
 
