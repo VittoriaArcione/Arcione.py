@@ -37,7 +37,7 @@ class retta:
         elif int(self.__b) == 0:
             return f'l equazione esplicita è: x = -{self.__c}/{self.__a}' 
         else:
-            return f'l equazione esplicita è: y =(-{self.__a}/{self.__c}x) + (-{self.__c}/{self.__c}) '
+            return f'l equazione esplicita è: y =(-{self.__a}/{self.__c})x + (-{self.__c}/{self.__b}) '
 
     
 
@@ -50,13 +50,18 @@ class retta:
         else:
             return f'il coefficiente angolare è: k = -{self.__a}/{self.__b} '
 
-   
+    def intercetta(self):
+        if int(self.__c)== 0:
+            return 'l intercetta è q = 0'
+        else:
+            return f'l intercetta è: q = -{self.__c}/{self.__b}'
+
     def fascio(self,a1,b1,c1): 
 
         if float (a1) == float(self.__a):
             return f'il fascio è improprio e la sua equazione è y= {self.__a}x + q '
         else:
-            return f'il fascio è proprio e la sua equazione è {self.__a}x + {a1}kx + {self.__b}y + {b1}ky + {self.__c} +  {c1}k = 0 '
+            return f'il fascio è proprio e la sua equazione è ({self.__a} + {a1}k) x + ({self.__b} + {b1}k) y + {self.__c} +  {c1} k = 0 '
 
 
     def intersezione(self, a1, b1, c1):
@@ -76,14 +81,16 @@ class retta:
         x = float(x)
         y = (self.__a)/(self.__b)*(x)-(self.__c)/(self.__b) 
         y1 = -(self.__c)/(self.__b) 
-        print("il valore di y in base alla x scelta è: ")
         if x == 0:
           return y1
         else: 
           return y 
-            
-       
-
+        
+    def punti(self, N, M):
+        output = []
+        for x in range(N, M+1):
+            output.append((x, self.trovaY(x)))
+        return output 
 
 a_b_c = retta (input("a: "), input("b: "), input("c: "))
 a1 = float(input("a1: "))
@@ -97,5 +104,7 @@ print(a_b_c.trovaY(input("x: ") ))
 print(a_b_c.equazione_imp())
 print(a_b_c.equazione_esp())
 print(a_b_c.coefficiente())
+print(a_b_c.intercetta())
+print(a_b_c.punti(N=1, M=10))
 print(a_b_c.fascio(a1, b1, c1))
 print(a_b_c.intersezione(a1, b1, c1))
