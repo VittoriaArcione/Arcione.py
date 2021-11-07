@@ -35,12 +35,12 @@ class retta:
     def equazione_esp(self):
         if int(self.__a) == 0:
             return f'l equazione esplicita è: y = -{self.__c}/{self.__b}'
-        elif int(self.__c) == 0:
-            return f'lequazione esplicita è: y = -{self.__a}x/{self.__b}' 
         elif int(self.__b) == 0:
             return f'l equazione esplicita è: x = -{self.__c}/{self.__a}' 
+        elif int(self.__c) == 0:
+            return f'lequazione esplicita è: y = -{self.__a}x/{self.__b}' 
         else:
-            return f'l equazione esplicita è: y =(-{self.__a}/{self.__c})x + (-{self.__c}/{self.__b}) '
+            return f'l equazione esplicita è: y =(-{self.__a}/{self.__b})x + (-{self.__c}/{self.__b}) '
 
  
     def coefficiente(self):
@@ -68,7 +68,15 @@ class retta:
 
 
     def intersezione(self, a1, b1, c1):
-        if -self.__a/self.__b == -a1/b1:
+        if b1 == 0: 
+            x = -c1/a1
+            y = (self.__c/self.__a - c1/a1) * (-self.__a/self.__b)
+            return round(x, 2), round(y, 2)
+        elif self.__b == 0:
+            x = -(self.__c)/(self.__a)
+            y = (c1/a1 - self.__c/self.__a)*(-a1/b1)
+            return  round (x, 2), round(y, 2)
+        if -(self.__a)/(self.__b) == -a1/b1:
             return None
         if -self.__a == a1 and self.__b == b1 and self.__c == c1:
             return f'le rette sono coincidenti'
@@ -81,6 +89,8 @@ class retta:
         
 
     def trovaY(self, x): 
+        if (self.__b) == 0:
+            return None
         x = float(x)
         y = (self.__a)/(self.__b)*(x)-(self.__c)/(self.__b) 
         y1 = -(self.__c)/(self.__b) 
