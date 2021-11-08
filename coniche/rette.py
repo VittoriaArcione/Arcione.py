@@ -62,7 +62,7 @@ class retta:
     def fascio(self,a1,b1,c1): 
 
         if float (a1) == float(self.__a):
-            return f'il fascio è improprio e la sua equazione è y= {self.__a}x + q '
+            return f'il fascio è improprio e la sua equazione è y= {-self.__a}/{self.__b}x + q '
         else:
             return f'il fascio è proprio e la sua equazione è ({self.__a} + {a1}k) x + ({self.__b} + {b1}k) y + {self.__c} +  {c1} k = 0 '
 
@@ -76,10 +76,10 @@ class retta:
             x = -(self.__c)/(self.__a)
             y = (c1/a1 - self.__c/self.__a)*(-a1/b1)
             return  round (x, 2), round(y, 2)
-        if -(self.__a)/(self.__b) == -a1/b1:
-            return None
-        if -self.__a == a1 and self.__b == b1 and self.__c == c1:
+        if self.__a == a1 and self.__b == b1 and self.__c == c1:
             return f'le rette sono coincidenti'
+        if -(self.__a)/(self.__b) == -a1/b1:
+            return f'le rette sono parallele'
         if -self.__a/self.__b == -a1/b1 and -self.__c/self.__b == -c1/b1:
             return self
         x = ((self.__c/self.__b)-(c1/b1))/((-self.__a/self.__b)+(a1/b1))
