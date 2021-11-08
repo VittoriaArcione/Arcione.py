@@ -92,7 +92,7 @@ class retta:
         if (self.__b) == 0:
             return None
         x = float(x)
-        y = (self.__a)/(self.__b)*(x)-(self.__c)/(self.__b) 
+        y = -(self.__a)/(self.__b)*(x)-(self.__c)/(self.__b) 
         y1 = -(self.__c)/(self.__b) 
         if x == 0:
           return y1
