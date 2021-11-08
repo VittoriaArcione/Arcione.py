@@ -90,7 +90,7 @@ class retta:
 
     def trovaY(self, x): 
         if (self.__b) == 0:
-            return None
+            return 0
         x = float(x)
         y = -(self.__a)/(self.__b)*(x)-(self.__c)/(self.__b) 
         y1 = -(self.__c)/(self.__b) 
