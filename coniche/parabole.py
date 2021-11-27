@@ -1,9 +1,9 @@
 class parabola:
-    def __init__(self,a,b,c):
+    def __init__(self, p1 = None, p2 = None, p3 = None):
     
-        self.__a = float(a)
-        self.__b = float(b)
-        self.__c = float(c)
+        self.__a = float(p1)
+        self.__b = float(p2)
+        self.__c = float(p3)
 
     def GetA(self):
          return self.__a
