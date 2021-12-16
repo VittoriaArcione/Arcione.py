@@ -31,26 +31,25 @@ class parabola:
     def direttrice(self):
     # parabola con asse parallelo all'asse y
      y = -1 -(self.__b)**2 + 4*(self.__a)*(self.__c)/4*(self.__a)
-     return(print (f'l equazione della retta direttrice di una parabola con asse parallelo all asse y è:  y= {y}'))
+     return f'l equazione della retta direttrice di una parabola con asse parallelo all asse y è:  y= {y}'
 
 
     def direttrice1(self):
      # parabola con asse prallelo all'asse x
-      x = -1 -(self.__b)**2 + 4*(self.__a)*(self.__c)/4*(self.__a)
-      return(print(f'l equazione della retta direttrice di una parabola con asse parallelo all asse x è:  x= {x}'))
+     x = -1 -(self.__b)**2 + 4*(self.__a)*(self.__c)/4*(self.__a)
+     return f'l equazione della retta direttrice di una parabola con asse parallelo all asse x è:  x= {x}'
     
     
     def asse(self):
     # parabola con asse parallelo all'asse delle y 
      y = -(self.__b)/(self.__a)*2
-     return(print(f'l equazione dell asse parallelo allasse y è:  y= {y}'))
+     return f'l equazione dell asse parallelo allasse y è:  y={y}'
       
 
     def asse1(self):
     # parabola con asse parallelo all'asse delle x
       y = -(self.__b)/(self.__a)*2
-      return(print(f'l equazione dell asse di una parabola con asse parallelo all asse x è:  y= {y}'))
-    
+      return f'l equazione dell asse di una parabola con asse parallelo all asse y è y= {y}'
 
 
 
