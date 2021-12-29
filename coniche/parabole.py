@@ -8,7 +8,7 @@ class parabola:
         self.__p1 = float(p1)
         self.__p2 = float(p2)
         self.__p3 = float(p3)
-        self.__a = 
+        self.__a = 1/(2*self.__p2 - 2*self.__p3)
         self.__b = -2*self.__a * self.__p1
         self.__c = (4*self.__a*self.__p2 + self.__b*self.__b - 1)/(4*self.__a)
         
