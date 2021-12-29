@@ -1,10 +1,17 @@
 class parabola:
-    def __init__(self, p1 = None, p2 = None, p3 = None):
-    
+    def __init__(self, tipo = "param", p1 = None, p2 = None, p3 = None):
+       if (tipo=="param"):
         self.__a = float(p1)
         self.__b = float(p2)
         self.__c = float(p3)
-
+       elif(tipo == "fuocoDiret"):
+        self.__p1 = float(p1)
+        self.__p2 = float(p2)
+        self.__p3 = float(p3)
+        self.__a = 
+        self.__b = -2*self.__a * self.__p1
+        self.__c = (4*self.__a*self.__p2 + self.__b*self.__b - 1)/(4*self.__a)
+        
     def GetA(self):
       return self.__a
  
