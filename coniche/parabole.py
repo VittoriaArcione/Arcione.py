@@ -53,11 +53,11 @@ class parabola:
     def asse(self, asse_simmetria ="x"):
         if (asse_simmetria=="x"): 
            y = -(self.__b)/(self.__a)*2
-           return f'l equazione dell asse parallelo allasse y è:  y = {y}'
+           return f'l equazione dell asse parallelo allasse x è:  y = {y}'
         
         elif (asse_simmetria=="y"):
           x = -(self.__b)/(self.__a)*2
-          return f'l equazione dell asse di una parabola con asse parallelo all asse y è y = {x}'
+          return f'l equazione dell asse di una parabola con asse parallelo all asse y è x = {x}'
     
 
 
