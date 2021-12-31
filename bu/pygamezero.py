@@ -1,5 +1,5 @@
 import pgzrun
-gennaro=Actor('gennaro',(55, 180))
+gennaro=Actor('gennaro',(400, 300))
 WIDTH=800
 HEIGHT=600
 
@@ -22,13 +22,13 @@ def update():
 def on_mouse_down(pos):
    if gennaro.collidepoint(pos):
        set_gennaro_hit()
-       print("EEEEEEEEEEK")
+       print("SWUSH")
    else:
        print("eheh")
 
 def set_gennaro_hit():
    gennaro.image= "megacalcio"
-   clock.schedule_unique(set_gennaro_normal, 0.5)
+   clock.schedule_unique(set_gennaro_normal, 0.2)
    #sound.play()
 
 def set_gennaro_normal():
