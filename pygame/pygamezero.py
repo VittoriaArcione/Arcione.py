@@ -3,7 +3,7 @@ gennaro=Actor('gennaro',(400, 300))
 WIDTH=800
 HEIGHT=600
 
-#sound= tone.create('D7', 0.5)
+sound= tone.create('D7', 0.5)
 
 def draw():
     screen.clear()
@@ -29,7 +29,7 @@ def on_mouse_down(pos):
 def set_gennaro_hit():
    gennaro.image= "megacalcio"
    clock.schedule_unique(set_gennaro_normal, 0.2)
-   #sound.play()
+   sound.play()
 
 def set_gennaro_normal():
     gennaro.image= "gennaro"
